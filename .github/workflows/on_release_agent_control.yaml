@@ -22,7 +22,7 @@ jobs:
       tag: ${{ github.event.release.tag_name || inputs.tag }}
       agent_type: NRIRedis
       display_name: "New Relic Redis Integration"
-      monitoring_type: INFRA
+      monitoring_type: ""
       oci_registry: "docker.io/jcoscolla75954/nri-redis"
       artifacts: |
         [

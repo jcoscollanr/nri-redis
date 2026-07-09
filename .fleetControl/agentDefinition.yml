@@ -1,0 +1,6 @@
+bindings:
+  - type: REQUIRES
+    targetType: AGENT
+    target: NRInfra
+    versions:
+      - ">1.71.0"
