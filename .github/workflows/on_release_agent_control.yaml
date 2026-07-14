@@ -16,14 +16,13 @@ permissions:
 
 jobs:
   oci-publish:
-    uses: jcoscollanr/coreint-automation/.github/workflows/reusable_agent_control_release.yaml@main
-    # uses: newrelic/coreint-automation/.github/workflows/reusable_agent_control_release.yaml@v3
+    uses: newrelic/coreint-automation/.github/workflows/reusable_agent_control_release.yaml@v3
     with:
       tag: ${{ github.event.release.tag_name || inputs.tag }}
       agent_type: NRIRedis
       display_name: "New Relic Redis Integration"
       monitoring_type: ""
-      oci_registry: "docker.io/jcoscolla75954/nri-redis"
+      oci_registry: "docker.io/newrelic/nri-redis-artifacts"
       artifacts: |
         [
           {"name":"linux-amd64","os":"linux","arch":"amd64","format":"tar+gzip","source_asset":"nri-redis_linux_{version}_amd64.tar.gz","source_format":"tar.gz","keep_files":["var/db/newrelic-infra/newrelic-integrations/bin/nri-redis"]},
